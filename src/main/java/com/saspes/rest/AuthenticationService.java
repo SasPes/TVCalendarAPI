@@ -69,9 +69,15 @@ public class AuthenticationService {
         if (isLogin()) {
             return Utils.messageJosn(Messages.INFO, "already login " + userName);
         }
-        
-        JsonElement jelement = new JsonParser().parse(profile);
-        JsonObject jobject = jelement.getAsJsonObject();
+
+        JsonElement jelement;
+        JsonObject jobject;
+        try {
+            jelement = new JsonParser().parse(profile);
+            jobject = jelement.getAsJsonObject();
+        } catch (Exception e) {
+            return Utils.messageJosn(Messages.ERROR, "body is not valid json");
+        }
 
         String username;
         try {
@@ -135,7 +141,7 @@ public class AuthenticationService {
         if (!isLogin()) {
             return Utils.messageJosn(Messages.INFO, "already logout");
         }
-        
+
         try {
             httpClient.close();
             setLogin(false);
