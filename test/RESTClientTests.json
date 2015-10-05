@@ -1,0 +1,16 @@
+{
+	"tv-login": {
+		"method": "POST",
+		"url": "http://localhost:8080/TVCalendarAPI/rest/authentication/login",
+		"body": "{\"username\": \"perokoj@gmail.com\",\"password\": \"perokojtest\"}",
+		"overrideMimeType": false,
+		"headers": []
+	},
+	"tv-logout": {
+		"method": "GET",
+		"url": "http://localhost:8080/TVCalendarAPI/rest/authentication/logout",
+		"body": "",
+		"overrideMimeType": false,
+		"headers": []
+	}
+}
