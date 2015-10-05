@@ -2,11 +2,11 @@
 TV Calendar API  
 http://www.pogdesign.co.uk/cat/  
 
-## login  
-POST  
-http://localhost:8080/TVCalendarAPI/rest/authentication/login  
-{"username": "your-user@name.com","password": "your-pass"}  
+### login  
+Method: POST  
+URL: http://localhost:8080/TVCalendarAPI/rest/authentication/login  
+Body: {"username": "your-user@name.com","password": "your-pass"}  
 
-## logout  
-GET  
-http://localhost:8080/TVCalendarAPI/rest/authentication/logout  
+### logout  
+Method: GET  
+URL: http://localhost:8080/TVCalendarAPI/rest/authentication/logout  
