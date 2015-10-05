@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TV Calendar API</title>
+        <meta charset="windows-1251">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <pre>
+***********************
+*** TV Calendar API ***
+***********************
+
+# login
+POST
+http://localhost:8080/TVCalendarAPI/rest/authentication/login
+{"username": "your-user@name.com","password": "your-pass"}
+
+# logout
+GET
+http://localhost:8080/TVCalendarAPI/rest/authentication/logout
+
+
+Overview for 29th September 2015
+http://www.pogdesign.co.uk/cat/day/29-9-2015
+
+http://www.pogdesign.co.uk/cat/today
+
+# getUrl
+var url = "http://www.pogdesign.co.uk/cat";
+var urlCors = "http://cors.io/?u=http://www.pogdesign.co.uk/cat"
+
+# login
+document.getElementsByClassName("imp login")[0].click();
+document.getElementById('logemail').value = 'your-user@name.com';
+document.getElementById('logpword').value = 'your-pass';
+document.getElementById('sub_login').click();
+
+# login url
+Method: POST
+URL: http://www.pogdesign.co.uk/cat/
+Body: username=your-user@name.com&password=your-pass&sub_login=Account+Login
+
+{"username": "your-user@name.com","password": "your-pass", "sub_login": "Account+Login"}
+
+# logout
+document.getElementsByClassName("logout")[0].click();
+
+# logout url
+http://www.pogdesign.co.uk/cat/logout
+
+# getDom
+function httpGet(url)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send();
+    return xmlHttp.responseText;
+}
+var tvCalendarDom = httpGet(url);
+
+# getShowsList
+var shows = document.getElementsByClassName("contbox ovbox");
+
+# getSize
+Object.keys(shows).length;
+
+# getName(i)
+shows[i].getElementsByTagName('h4')[0].getElementsByTagName('a')[0].innerHTML.replace(" <span>Summary </span>", "");
+
+# getSeasonEpisode(i)
+var seasonEpisode = shows[i].getElementsByTagName('h5')[0].getElementsByTagName('span')[0].innerHTML;
+
+# getEpisodeSpan(i)
+var episodeSpan = shows[i].getElementsByTagName('h5')[0].getElementsByTagName('span')[0];
+
+# getEpisodeName(i)
+shows[i].getElementsByTagName('h5')[0].getElementsByTagName('a')[0].innerHTML.replace(" " + episodeSpan.outerHTML, "");
+
+# getSeason
+seasonEpisode.split(", ")[0].replace("Season ", "");
+
+# getEpisode
+seasonEpisode.split(", ")[1].replace("Episode ", "");
+
+# getThumbnailUrl(i)
+shows[i].style.backgroundImage.replace('url(','').replace(')','');
+
+            </pre>
+        </div>
+    </body>
+</html>
