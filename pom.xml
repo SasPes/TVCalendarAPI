@@ -10,13 +10,6 @@
 
     <dependencies>
 
-        <!-- Jersey -->
-        <dependency>
-            <groupId>com.sun.jersey</groupId>
-            <artifactId>jersey-server</artifactId>
-            <version>1.8</version>
-        </dependency>
-
         <!-- Spring 3 dependencies -->
         <dependency>
             <groupId>org.springframework</groupId>
