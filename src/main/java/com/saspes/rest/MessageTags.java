@@ -9,7 +9,8 @@ package com.saspes.rest;
  *
  * @author SasPes
  */
-public enum Messages {
-    ERROR,
-    INFO
+public enum MessageTags {
+    INFO, 
+    WARNING,
+    ERROR
 }

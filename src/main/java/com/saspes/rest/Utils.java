@@ -19,7 +19,7 @@ import java.util.Date;
  */
 public class Utils {
 
-    public static String messageJosn(Messages message, String messageText) {
+    public static String messageJosn(MessageTags message, String messageText) {
         DateFormat df = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
         Date date = new Date();
 
